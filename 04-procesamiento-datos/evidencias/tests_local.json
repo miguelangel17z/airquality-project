@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T05:42:53+00:00",
+  "environment": "local_loopback_tls",
+  "python_version": "3.9.13",
+  "mariadb_version": "11.4.10-MariaDB",
+  "driver": "PyMySQL 1.2.4",
+  "tests_run": 10,
+  "tests_skipped": 0
+}

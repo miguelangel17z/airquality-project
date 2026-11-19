@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "environment": "local_mariadb_and_official_public_files",
+  "mariadb_version": "11.4.10-MariaDB",
+  "python_version": "3.9.13",
+  "boto3_version": "1.42.97",
+  "s3_calls": 0,
+  "record_counts": {
+    "rds": 329597,
+    "ec2": 1155804,
+    "url": 3195
+  },
+  "manifest": {
+    "run_id": "20261119T080637-b842fcb6aa06402bb3b91d28493aade0",
+    "year": 2024,
+    "bucket": "<S3_BUCKET>",
+    "region": "us-east-1",
+    "mode": "dry-run",
+    "selected_source": "all",
+    "status": "passed",
+    "started_at_utc": "2026-11-19T08:06:37+00:00",
+    "elapsed_seconds": 6.569,
+    "manifest_s3_uri": null,
+    "summary": {
+      "validated": 14,
+      "uploaded": 0,
+      "skipped_identical": 0,
+      "conflict": 0,
+      "error": 0
+    },
+    "objects": [
+      {
+        "source": "rds",
+        "origin": "airquality.daily_aqi_by_county",
+        "s3_uri": "s3://<S3_BUCKET>/raw/rds/epa/year=2024/daily_aqi_by_county_2024.csv",
+        "records": 329597,
+        "size_bytes": 21682238,
+        "sha256": "ced232bebb7c01ed13c57ef77568871f4f51ab5052a94d99ef62e6a5b4d4a3bb",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 4.405
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202401-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202401-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "7d1f8116eb7a5ae7c8627a65e904e03945071ca8bfd0cbe583835252bcaccb60",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.11
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202402-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202402-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9350942,
+        "sha256": "4280b83df3b51440e1685f33da4dfc7de318ee2da378e725dd34bc2edbdefe0f",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.109
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202403-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202403-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "68bc2316531d6ec2763a4cbe083e9afe0317620754dc0d23a0acec489fbd2472",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.109
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202404-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202404-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9382012,
+        "sha256": "5366effdc6ab4a4d73aaab2b2ff27bbb847f8a2461a4979b32076a458da4e954",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.108
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202405-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202405-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "d0ffa4fa2b414c62fef73179311ffdfe6cc83dc14110e6820d7abd48671eac61",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.107
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202406-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202406-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9382012,
+        "sha256": "0e17f2fbf3cadf452a23d709750d988569e93c7ed3bcbbb86b2e76ab04d2f5bf",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.109
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202407-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202407-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "d59a7722a671564b2d225ef35742e69f7110ec91615a3c764f4cfd1e39d93069",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.11
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202408-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202408-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "e5b54469eafae1ae46c8b1e86c847bc1302ca2a55d2c892fd8b02c265b1c8e2e",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.107
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202409-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202409-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9382012,
+        "sha256": "01e9da219b80a0196a13eb6fb72658282076f52101e45ee9b2f5f9c2ed48c928",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.106
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202410-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202410-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "f37d6f2a6d9fbb0b912465dac56b153fec885d427a3c1a0e7bcede485372f2ca",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.108
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202411-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202411-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9382012,
+        "sha256": "c2178aad129a77a6bfd34248a161a735fd20685c6cadcfbe375d450aa12edebd",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.107
+      },
+      {
+        "source": "ec2",
+        "origin": ".cache/noaa-epinoaa-2024/202412-scaled.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/ec2/noaa/year=2024/202412-scaled.csv",
+        "records": 96317,
+        "size_bytes": 9413082,
+        "sha256": "a4b493eb547e7b1c978b219af9fa5cb3060e877e1d21bcc48fcb54b60c9383cf",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.107
+      },
+      {
+        "source": "url",
+        "origin": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/counties/totals/co-est2024-alldata.csv",
+        "s3_uri": "s3://<S3_BUCKET>/raw/url/census/year=2024/co-est2024-alldata.csv",
+        "records": 3195,
+        "size_bytes": 1769182,
+        "sha256": "abcc8720d669e793bbfdcd440eeec37a78db3b452adbe4ccd1eadf7c72b522b9",
+        "status": "validated",
+        "error": null,
+        "elapsed_seconds": 0.861
+      }
+    ]
+  }
+}

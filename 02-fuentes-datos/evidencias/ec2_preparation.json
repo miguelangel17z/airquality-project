@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T02:20:02+00:00",
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/hourly_44201_2024.zip",
+  "archive_name": "hourly_44201_2024.zip",
+  "archive_origin": "local",
+  "archive_bytes": 68510135,
+  "archive_sha256": "14052565e3a062bea04e01d761b9daefd4077fa9ed50485d46ea1b776d48d7c9",
+  "zip_crc_passed": true,
+  "csv_name": "hourly_44201_2024.csv",
+  "csv_bytes": 2054049428,
+  "csv_sha256": "0d6786fecf96d68e2172dfeb3a5b715457b6e2edcdad19258f900908f03a0a40",
+  "preparation": "extracted"
+}

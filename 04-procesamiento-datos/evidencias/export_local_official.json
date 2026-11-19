@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "environment": "local_mariadb_rebuilt_from_official_epa_noaa_files",
+  "mariadb_version": "11.4.10-MariaDB",
+  "python_version": "3.9.13",
+  "source_evidence": "03-ingesta-datos/evidencias/epa_noaa_overlap_local.json",
+  "epa_records_loaded": 329597,
+  "noaa_records_loaded": 1137162,
+  "verified_csv_sha256_and_row_count": true,
+  "manifest": {
+    "source_view": "v_aqi_weather_daily",
+    "csv_file": "aqi_weather_2024.csv",
+    "year": 2024,
+    "row_count": 323540,
+    "columns": [
+      "state_name",
+      "county_name",
+      "state_code",
+      "county_code",
+      "measurement_date",
+      "aqi",
+      "category",
+      "defining_parameter",
+      "defining_site",
+      "sites_reporting",
+      "tmax_c",
+      "tmin_c",
+      "tavg_c",
+      "precipitation_mm"
+    ],
+    "date_min": "2024-01-01",
+    "date_max": "2024-12-31",
+    "size_bytes": 28508745,
+    "sha256": "e991532897be191dee8741431f88a3b8c6ba5a2bd04eaca6695f52423ee87fa0",
+    "elapsed_seconds": 6.774,
+    "exported_at_utc": "2026-11-19T05:43:57+00:00"
+  }
+}

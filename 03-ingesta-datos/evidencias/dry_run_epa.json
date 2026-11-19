@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "mode": "dry-run",
+  "processed": 329597,
+  "inserted": 0,
+  "already_present": 0,
+  "invalid_records": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.868,
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2024.zip",
+  "csv_name": "daily_aqi_by_county_2024.csv",
+  "csv_bytes": 26626210,
+  "csv_sha256": "d2f6956102fb0557519806192f1d489fda821c5800e7d3d0f9c8324a7239f2a7",
+  "python_version": "3.9.13",
+  "checked_at_utc": "2026-11-19T04:27:42+00:00"
+}

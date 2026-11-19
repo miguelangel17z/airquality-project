@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T05:20:10+00:00",
+  "method": "local_csv_inner_key_comparison",
+  "epa_csv_sha256": "d2f6956102fb0557519806192f1d489fda821c5800e7d3d0f9c8324a7239f2a7",
+  "epa_records": 329597,
+  "noaa_records": 1137162,
+  "matching_records": 323540,
+  "unmatched_epa_records": 6057,
+  "coverage_pct": "98.16",
+  "epa_first_date": "2024-01-01",
+  "epa_last_date": "2024-12-31",
+  "noaa_first_date": "2024-01-01",
+  "noaa_last_date": "2024-12-31",
+  "files": [
+    {
+      "file": "202401-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 24853
+    },
+    {
+      "file": "202402-scaled.csv",
+      "dated_noaa_records": 90103,
+      "matching_records": 23617
+    },
+    {
+      "file": "202403-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 28277
+    },
+    {
+      "file": "202404-scaled.csv",
+      "dated_noaa_records": 93210,
+      "matching_records": 27648
+    },
+    {
+      "file": "202405-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 28589
+    },
+    {
+      "file": "202406-scaled.csv",
+      "dated_noaa_records": 93210,
+      "matching_records": 27707
+    },
+    {
+      "file": "202407-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 28637
+    },
+    {
+      "file": "202408-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 28799
+    },
+    {
+      "file": "202409-scaled.csv",
+      "dated_noaa_records": 93210,
+      "matching_records": 27662
+    },
+    {
+      "file": "202410-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 28167
+    },
+    {
+      "file": "202411-scaled.csv",
+      "dated_noaa_records": 93210,
+      "matching_records": 24567
+    },
+    {
+      "file": "202412-scaled.csv",
+      "dated_noaa_records": 96317,
+      "matching_records": 25017
+    }
+  ]
+}

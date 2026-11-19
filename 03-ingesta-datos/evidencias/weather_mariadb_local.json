@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T05:23:47+00:00",
+  "python_version": "3.9.13",
+  "server_version": "11.4.10-MariaDB",
+  "driver": "PyMySQL 1.2.4",
+  "server_scope": "local_loopback_tls",
+  "tests_run": 31,
+  "tests_skipped": 0,
+  "checks": [
+    "repeatable_schema_and_date_index",
+    "epa_regression",
+    "noaa_idempotence",
+    "monthly_rollback_on_conflict_and_invalid_row",
+    "retain_unmatched_noaa",
+    "inner_join_view",
+    "epa_left_join_coverage_and_date_ranges"
+  ],
+  "fixture": {
+    "epa": 3,
+    "noaa": 3,
+    "matched": 2,
+    "unmatched_epa": 1,
+    "coverage_pct": "66.67"
+  }
+}

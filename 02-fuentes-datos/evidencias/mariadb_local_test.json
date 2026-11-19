@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T02:27:52+00:00",
+  "mariadb_version": "11.4.10-MariaDB",
+  "pymysql_version": "1.2.4",
+  "server_location": "local_loopback",
+  "schema_columns": 28,
+  "primary_key_columns": [
+    "state_code",
+    "county_code",
+    "site_number"
+  ],
+  "tls_cipher": "TLS_AES_256_GCM_SHA384",
+  "invalid_hostname_rejected": true,
+  "test_fixture_rows": 2,
+  "first_inserted": 2,
+  "second_inserted": 0,
+  "second_already_present": 2,
+  "rollback_on_conflict": true,
+  "production_rows_inserted": 0
+}

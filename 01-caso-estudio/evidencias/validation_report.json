@@ -1,0 +1,264 @@
+{
+  "started_at_utc": "2026-11-19T01:59:17+00:00",
+  "mode": "online",
+  "refresh_requested": false,
+  "catalog_url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+  "catalog_consulted_on": "2026-11-18",
+  "sample_size_per_csv": 25,
+  "network_timeout_seconds": 30,
+  "datasets": [
+    {
+      "name": "stations",
+      "source_url": "https://aqs.epa.gov/aqsweb/airdata/aqs_sites.zip",
+      "archive_name": "aqs_sites.zip",
+      "epa_catalog_published_rows": 20994,
+      "status": "passed",
+      "http": {
+        "status": "reachable",
+        "method": "GET",
+        "http_status": 200,
+        "content_type": "application/zip",
+        "content_length": 1018314,
+        "last_modified": "Mon, 13 Jul 2026 15:47:40 GMT",
+        "etag": "\"f89ca-65680029fd05d\""
+      },
+      "origin": "download",
+      "archive": {
+        "zip_bytes": 1018314,
+        "sha256": "56b322f6a3d5368d055bce53d0988275c0b27fbcced3d57a6ce8f2e2b539e15a",
+        "zip_crc_passed": true,
+        "csv_files": [
+          {
+            "name": "aqs_sites.csv",
+            "uncompressed_bytes": 6046667,
+            "headers": [
+              "State Code",
+              "County Code",
+              "Site Number",
+              "Latitude",
+              "Longitude",
+              "Datum",
+              "Elevation",
+              "Land Use",
+              "Location Setting",
+              "Site Established Date",
+              "Site Closed Date",
+              "Met Site State Code",
+              "Met Site County Code",
+              "Met Site Site Number",
+              "Met Site Type",
+              "Met Site Distance",
+              "Met Site Direction",
+              "GMT Offset",
+              "Owning Agency",
+              "Local Site Name",
+              "Address",
+              "Zip Code",
+              "State Name",
+              "County Name",
+              "City Name",
+              "CBSA Name",
+              "Tribe Name",
+              "Extraction Date"
+            ],
+            "sampled_rows": 25,
+            "sample_observed_values": {
+              "State Code": [
+                "01"
+              ],
+              "County Code": [
+                "001",
+                "003",
+                "005",
+                "007",
+                "009",
+                "015",
+                "021",
+                "023",
+                "025",
+                "027",
+                "031",
+                "033"
+              ],
+              "Site Number": [
+                "0001",
+                "0002",
+                "0003",
+                "0010"
+              ]
+            },
+            "verified_total_rows": null
+          }
+        ]
+      },
+      "cache_issue": "No existe una copia en caché.",
+      "error": null
+    },
+    {
+      "name": "ozone_measurements",
+      "source_url": "https://aqs.epa.gov/aqsweb/airdata/hourly_44201_2024.zip",
+      "archive_name": "hourly_44201_2024.zip",
+      "epa_catalog_published_rows": 8995978,
+      "status": "passed",
+      "http": {
+        "status": "reachable",
+        "method": "GET",
+        "http_status": 200,
+        "content_type": "application/zip",
+        "content_length": 68510135,
+        "last_modified": "Mon, 13 Jul 2026 15:47:55 GMT",
+        "etag": "\"41561b7-656800386703b\""
+      },
+      "origin": "download",
+      "archive": {
+        "zip_bytes": 68510135,
+        "sha256": "14052565e3a062bea04e01d761b9daefd4077fa9ed50485d46ea1b776d48d7c9",
+        "zip_crc_passed": true,
+        "csv_files": [
+          {
+            "name": "hourly_44201_2024.csv",
+            "uncompressed_bytes": 2054049428,
+            "headers": [
+              "State Code",
+              "County Code",
+              "Site Num",
+              "Parameter Code",
+              "POC",
+              "Latitude",
+              "Longitude",
+              "Datum",
+              "Parameter Name",
+              "Date Local",
+              "Time Local",
+              "Date GMT",
+              "Time GMT",
+              "Sample Measurement",
+              "Units of Measure",
+              "MDL",
+              "Uncertainty",
+              "Qualifier",
+              "Method Type",
+              "Method Code",
+              "Method Name",
+              "State Name",
+              "County Name",
+              "Date of Last Change"
+            ],
+            "sampled_rows": 25,
+            "sample_observed_values": {
+              "State Code": [
+                "01"
+              ],
+              "County Code": [
+                "003"
+              ],
+              "Site Num": [
+                "0010"
+              ],
+              "Parameter Code": [
+                "44201"
+              ],
+              "POC": [
+                "1"
+              ],
+              "Date Local": [
+                "2024-03-01",
+                "2024-03-02"
+              ],
+              "Units of Measure": [
+                "Parts per million"
+              ]
+            },
+            "verified_total_rows": null
+          }
+        ]
+      },
+      "cache_issue": "No existe una copia en caché.",
+      "error": null
+    },
+    {
+      "name": "daily_air_quality",
+      "source_url": "https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2024.zip",
+      "archive_name": "daily_aqi_by_county_2024.zip",
+      "epa_catalog_published_rows": 329597,
+      "status": "passed",
+      "http": {
+        "status": "reachable",
+        "method": "GET",
+        "http_status": 200,
+        "content_type": "application/zip",
+        "content_length": 1625395,
+        "last_modified": "Mon, 13 Jul 2026 15:47:44 GMT",
+        "etag": "\"18cd33-6568002e19c57\""
+      },
+      "origin": "download",
+      "archive": {
+        "zip_bytes": 1625395,
+        "sha256": "4a3dfac4ec0880dd794b139fd7b8ab142b38b9cde0346e708aad37f9cc95dbdc",
+        "zip_crc_passed": true,
+        "csv_files": [
+          {
+            "name": "daily_aqi_by_county_2024.csv",
+            "uncompressed_bytes": 26626210,
+            "headers": [
+              "State Name",
+              "county Name",
+              "State Code",
+              "County Code",
+              "Date",
+              "AQI",
+              "Category",
+              "Defining Parameter",
+              "Defining Site",
+              "Number of Sites Reporting"
+            ],
+            "sampled_rows": 25,
+            "sample_observed_values": {
+              "State Code": [
+                "01"
+              ],
+              "County Code": [
+                "003"
+              ],
+              "Date": [
+                "2024-01-03",
+                "2024-01-04",
+                "2024-01-05",
+                "2024-01-06",
+                "2024-01-07",
+                "2024-01-08",
+                "2024-01-09",
+                "2024-01-10",
+                "2024-01-11",
+                "2024-01-12",
+                "2024-01-13",
+                "2024-01-14",
+                "2024-01-15",
+                "2024-01-16",
+                "2024-01-17",
+                "2024-01-18",
+                "2024-01-19",
+                "2024-01-20",
+                "2024-01-21",
+                "2024-01-22",
+                "2024-01-23",
+                "2024-01-24",
+                "2024-01-25",
+                "2024-01-26",
+                "2024-01-27"
+              ],
+              "Defining Parameter": [
+                "PM2.5"
+              ]
+            },
+            "verified_total_rows": null
+          }
+        ]
+      },
+      "cache_issue": "No existe una copia en caché.",
+      "error": null
+    }
+  ],
+  "finished_at_utc": "2026-11-19T02:00:39+00:00",
+  "status": "passed"
+}

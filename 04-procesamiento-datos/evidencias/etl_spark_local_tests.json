@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T08:38:34+00:00",
+  "spark_version": "3.5.4",
+  "python_version": "3.11.9",
+  "java_version": "17.0.21",
+  "tests_run": 10,
+  "tests_skipped": 0,
+  "checks": [
+    "epa_schema_and_primary_key",
+    "noaa_calendar_and_leap_year",
+    "noaa_false_padding_and_duplicates",
+    "census_windows_1252_and_county_key",
+    "left_join_retains_unmatched",
+    "partitioned_parquet_readback_and_file_uri_with_spaces",
+    "failure_report_before_write",
+    "no_overwrite_and_raw_guard",
+    "glue_argument_parsing"
+  ]
+}

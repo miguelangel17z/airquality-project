@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T08:08:25+00:00",
+  "python_version": "3.9.13",
+  "boto3_version": "1.42.97",
+  "botocore_version": "1.42.97",
+  "tests_run": 14,
+  "tests_skipped": 0,
+  "test_services": "simulated_rds_http_s3",
+  "checks": [
+    "three_sources_and_raw_bytes",
+    "read_only_rds_query_and_streaming",
+    "census_encoding_headers_and_truncation",
+    "conditional_put_and_sha256",
+    "idempotent_replay",
+    "existing_content_conflict",
+    "403_and_connection_error",
+    "concurrent_412",
+    "local_and_simulated_s3_manifest",
+    "dry_run_without_s3"
+  ]
+}

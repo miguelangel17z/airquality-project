@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T02:26:09+00:00",
+  "mode": "validate-only",
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/aqs_sites.zip",
+  "archive_name": "aqs_sites.zip",
+  "archive_sha256": "56b322f6a3d5368d055bce53d0988275c0b27fbcced3d57a6ce8f2e2b539e15a",
+  "processed": 20994,
+  "inserted": 0,
+  "already_present": null,
+  "batch_size": 500
+}

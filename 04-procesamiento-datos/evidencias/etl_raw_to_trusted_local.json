@@ -1,0 +1,500 @@
+{
+  "status": "passed",
+  "year": 2024,
+  "spark_version": "3.5.4",
+  "started_at_utc": "2026-11-19T08:33:16+00:00",
+  "datasets": {
+    "epa": {
+      "source": ".cache/trusted-inputs/epa/daily_aqi_by_county_2024.csv",
+      "output": ".cache/trusted-run-2024/trusted/epa",
+      "output_rows": 329597,
+      "input_rows": 329597,
+      "invalid_rows": 0,
+      "missing_values": {
+        "state_name": 0,
+        "county_name": 0,
+        "state_code": 0,
+        "county_code": 0,
+        "measurement_date": 0,
+        "aqi": 0,
+        "category": 0,
+        "defining_parameter": 0,
+        "defining_site": 0,
+        "sites_reporting": 0
+      },
+      "duplicate_rows": 0,
+      "date_min": "2024-01-01",
+      "date_max": "2024-12-31",
+      "schema": [
+        {
+          "name": "state_name",
+          "type": "string"
+        },
+        {
+          "name": "county_name",
+          "type": "string"
+        },
+        {
+          "name": "state_code",
+          "type": "string"
+        },
+        {
+          "name": "county_code",
+          "type": "string"
+        },
+        {
+          "name": "measurement_date",
+          "type": "date"
+        },
+        {
+          "name": "aqi",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "name": "defining_parameter",
+          "type": "string"
+        },
+        {
+          "name": "defining_site",
+          "type": "string"
+        },
+        {
+          "name": "sites_reporting",
+          "type": "int"
+        },
+        {
+          "name": "year",
+          "type": "int"
+        },
+        {
+          "name": "month",
+          "type": "int"
+        }
+      ],
+      "processing_seconds": 6.153,
+      "write_seconds": 1.41
+    },
+    "noaa": {
+      "source": ".cache/noaa-epinoaa-2024",
+      "output": ".cache/trusted-run-2024/trusted/noaa",
+      "output_rows": 1137162,
+      "input_rows": 1155804,
+      "invalid_rows": 0,
+      "input_files": 12,
+      "padding_candidates": 18642,
+      "missing_values": {
+        "region_type": 0,
+        "fips": 0,
+        "date": 18642,
+        "tmax": 0,
+        "tmin": 0,
+        "tavg": 0,
+        "prcp": 0
+      },
+      "padding_discarded": 18642,
+      "invalid_county_months": 0,
+      "duplicate_rows": 0,
+      "date_min": "2024-01-01",
+      "date_max": "2024-12-31",
+      "schema": [
+        {
+          "name": "fips",
+          "type": "string"
+        },
+        {
+          "name": "state_code",
+          "type": "string"
+        },
+        {
+          "name": "county_code",
+          "type": "string"
+        },
+        {
+          "name": "measurement_date",
+          "type": "date"
+        },
+        {
+          "name": "tmax_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "tmin_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "tavg_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "precipitation_mm",
+          "type": "decimal(8,2)"
+        },
+        {
+          "name": "year",
+          "type": "int"
+        },
+        {
+          "name": "month",
+          "type": "int"
+        }
+      ],
+      "processing_seconds": 9.336,
+      "write_seconds": 0.822
+    },
+    "census": {
+      "source": ".cache/census-popest-2024/co-est2024-alldata.csv",
+      "output": ".cache/trusted-run-2024/trusted/census",
+      "output_rows": 3144,
+      "input_rows": 3195,
+      "invalid_rows": 0,
+      "missing_values": {
+        "STATE": 0,
+        "COUNTY": 0,
+        "POPESTIMATE2024": 0,
+        "SUMLEV": 0
+      },
+      "county_rows": 3144,
+      "filtered_non_county_rows": 51,
+      "duplicate_rows": 0,
+      "schema": [
+        {
+          "name": "fips",
+          "type": "string"
+        },
+        {
+          "name": "state_code",
+          "type": "string"
+        },
+        {
+          "name": "county_code",
+          "type": "string"
+        },
+        {
+          "name": "population_estimate",
+          "type": "bigint"
+        },
+        {
+          "name": "year",
+          "type": "int"
+        }
+      ],
+      "processing_seconds": 1.22,
+      "write_seconds": 0.11
+    },
+    "aqi_weather": {
+      "output_rows": 323540,
+      "unmatched_census_rows": 2598,
+      "date_min": "2024-01-01",
+      "date_max": "2024-12-31",
+      "epa_input_rows": 329597,
+      "noaa_input_rows": 1137162,
+      "census_input_rows": 3144,
+      "unmatched_epa_rows": 6057,
+      "epa_noaa_coverage_pct": 98.1623,
+      "census_matches": 320942,
+      "census_coverage_pct": 99.197,
+      "missing_values": {
+        "population_estimate": 2598
+      },
+      "duplicate_rows": 0,
+      "schema": [
+        {
+          "name": "state_name",
+          "type": "string"
+        },
+        {
+          "name": "county_name",
+          "type": "string"
+        },
+        {
+          "name": "state_code",
+          "type": "string"
+        },
+        {
+          "name": "county_code",
+          "type": "string"
+        },
+        {
+          "name": "measurement_date",
+          "type": "date"
+        },
+        {
+          "name": "aqi",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "name": "defining_parameter",
+          "type": "string"
+        },
+        {
+          "name": "defining_site",
+          "type": "string"
+        },
+        {
+          "name": "sites_reporting",
+          "type": "int"
+        },
+        {
+          "name": "fips",
+          "type": "string"
+        },
+        {
+          "name": "tmax_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "tmin_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "tavg_c",
+          "type": "decimal(6,2)"
+        },
+        {
+          "name": "precipitation_mm",
+          "type": "decimal(8,2)"
+        },
+        {
+          "name": "population_estimate",
+          "type": "bigint"
+        },
+        {
+          "name": "year",
+          "type": "int"
+        },
+        {
+          "name": "month",
+          "type": "int"
+        }
+      ],
+      "output": ".cache/trusted-run-2024/trusted/aqi_weather",
+      "processing_seconds": 2.395,
+      "write_seconds": 0.732
+    }
+  },
+  "stage": "complete",
+  "elapsed_seconds": 22.179,
+  "verification": {
+    "environment": "local_windows_java17_python311",
+    "python_version": "3.11.9",
+    "input_sha256_matched_ingestion_manifest": 14,
+    "parquet_readback": {
+      "epa": {
+        "rows": 329597,
+        "partition_directories": 12,
+        "parquet_files": 12,
+        "schema": [
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "county_name",
+            "type": "string"
+          },
+          {
+            "name": "state_code",
+            "type": "string"
+          },
+          {
+            "name": "county_code",
+            "type": "string"
+          },
+          {
+            "name": "measurement_date",
+            "type": "date"
+          },
+          {
+            "name": "aqi",
+            "type": "int"
+          },
+          {
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "name": "defining_parameter",
+            "type": "string"
+          },
+          {
+            "name": "defining_site",
+            "type": "string"
+          },
+          {
+            "name": "sites_reporting",
+            "type": "int"
+          },
+          {
+            "name": "year",
+            "type": "int"
+          },
+          {
+            "name": "month",
+            "type": "int"
+          }
+        ]
+      },
+      "noaa": {
+        "rows": 1137162,
+        "partition_directories": 12,
+        "parquet_files": 12,
+        "schema": [
+          {
+            "name": "fips",
+            "type": "string"
+          },
+          {
+            "name": "state_code",
+            "type": "string"
+          },
+          {
+            "name": "county_code",
+            "type": "string"
+          },
+          {
+            "name": "measurement_date",
+            "type": "date"
+          },
+          {
+            "name": "tmax_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "tmin_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "tavg_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "precipitation_mm",
+            "type": "decimal(8,2)"
+          },
+          {
+            "name": "year",
+            "type": "int"
+          },
+          {
+            "name": "month",
+            "type": "int"
+          }
+        ]
+      },
+      "census": {
+        "rows": 3144,
+        "partition_directories": 1,
+        "parquet_files": 1,
+        "schema": [
+          {
+            "name": "fips",
+            "type": "string"
+          },
+          {
+            "name": "state_code",
+            "type": "string"
+          },
+          {
+            "name": "county_code",
+            "type": "string"
+          },
+          {
+            "name": "population_estimate",
+            "type": "bigint"
+          },
+          {
+            "name": "year",
+            "type": "int"
+          }
+        ]
+      },
+      "aqi_weather": {
+        "rows": 323540,
+        "partition_directories": 12,
+        "parquet_files": 12,
+        "schema": [
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "county_name",
+            "type": "string"
+          },
+          {
+            "name": "state_code",
+            "type": "string"
+          },
+          {
+            "name": "county_code",
+            "type": "string"
+          },
+          {
+            "name": "measurement_date",
+            "type": "date"
+          },
+          {
+            "name": "aqi",
+            "type": "int"
+          },
+          {
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "name": "defining_parameter",
+            "type": "string"
+          },
+          {
+            "name": "defining_site",
+            "type": "string"
+          },
+          {
+            "name": "sites_reporting",
+            "type": "int"
+          },
+          {
+            "name": "fips",
+            "type": "string"
+          },
+          {
+            "name": "tmax_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "tmin_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "tavg_c",
+            "type": "decimal(6,2)"
+          },
+          {
+            "name": "precipitation_mm",
+            "type": "decimal(8,2)"
+          },
+          {
+            "name": "population_estimate",
+            "type": "bigint"
+          },
+          {
+            "name": "year",
+            "type": "int"
+          },
+          {
+            "name": "month",
+            "type": "int"
+          }
+        ]
+      }
+    }
+  }
+}

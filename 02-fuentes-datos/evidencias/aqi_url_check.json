@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T02:19:54+00:00",
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2024.zip",
+  "method": "HEAD",
+  "http_status": 200,
+  "content_type": "application/zip",
+  "content_length": 1625395,
+  "last_modified": "Mon, 13 Jul 2026 15:47:44 GMT",
+  "etag": "\"18cd33-6568002e19c57\"",
+  "timeout_seconds": 30,
+  "error": null
+}
