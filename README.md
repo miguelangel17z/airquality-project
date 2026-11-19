@@ -1,6 +1,52 @@
 # Plataforma Big Data para el análisis de la calidad del aire y contaminación por ozono en Estados Unidos durante 2024
 
 Proyecto académico de Tópicos de Telemática, Universidad EAFIT. Su objetivo es construir una plataforma reproducible para estudiar la concentración de ozono y su asociación con el Índice de Calidad del Aire (AQI) mediante datos públicos de EPA AirData.
+flowchart LR
+    classDef src fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef ing fill:#e0f7fa,stroke:#00838f,stroke-width:2px,color:#006064
+    classDef lake fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#e65100
+    classDef proc fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    classDef serv fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#4a148c
+
+    subgraph G1 ["1. Fuentes"]
+        direction TB
+        RDS[("RDS MariaDB<br/>EPA AQI")]:::src
+        EC2F["EC2 Local<br/>12 CSV NOAA"]:::src
+        URL["HTTPS<br/>Census 2024"]:::src
+    end
+
+    subgraph G2 ["2. Ingesta"]
+        ING["EC2 Python<br/>ingest_to_s3.py"]:::ing
+    end
+
+    subgraph G3 ["3. Data Lake (Amazon S3)"]
+        direction TB
+        RAW["Zona RAW<br/>14 CSV + Manifiesto"]:::lake
+        TRU["Zona TRUSTED<br/>Parquet Particionado"]:::lake
+        REF["Zona REFINED<br/>Parquet y JSON"]:::lake
+    end
+
+    subgraph G4 ["4. Procesamiento y Analítica"]
+        direction TB
+        GLUE["AWS Glue 4.0<br/>ETL PySpark"]:::proc
+        CAT["Glue Crawler y<br/>Data Catalog"]:::proc
+        ATH["Amazon Athena<br/>SQL"]:::proc
+        EMR["Amazon EMR<br/>Spark + Jupyter"]:::proc
+    end
+
+    subgraph G5 ["5. Consumo"]
+        direction TB
+        API["Lambda +<br/>API Gateway"]:::serv
+        STR["Streamlit<br/>Dashboard"]:::serv
+    end
+
+    RDS & EC2F & URL --> ING
+    ING --> RAW
+    RAW --> GLUE --> TRU
+    TRU --> CAT
+    CAT --> ATH
+    CAT --> EMR --> REF
+    REF --> API --> STR
 
 ## Módulos
 
